@@ -43,7 +43,7 @@ RCT_EXPORT_METHOD(presentPicker: (BOOL)selectMultiple:(RCTResponseSenderBlock)ca
         [picker setShowsCloudItems:false];
         [picker setAllowsPickingMultipleItems:selectMultiple];
         if ([picker respondsToSelector:@selector(setShowsItemsWithProtectedAssets:)]) {
-            [picker setShowsItemsWithProtectedAssets:false];
+            [picker setShowsItemsWithProtectedAssets:true];
         }
         [picker setDelegate:self];
         [topViewController presentViewController:picker animated:true completion:^{}];
